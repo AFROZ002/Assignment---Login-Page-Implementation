@@ -38,15 +38,15 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
+    <div className="dashboard">
       <h1>Welcome, {user}</h1>
       <h2>Brands List:</h2>
-      <ul>
+      <ul className="brand-list">
         {brands.map((brand) => (
-          <li key={brand.id}>{brand.name}</li>
+          <li key={brand.id} className="brand-item">{brand.name}</li>
         ))}
       </ul>
-      <button onClick={() => handleLogout()}>Logout</button>
+      <button onClick={handleLogout} className="btn">Logout</button>
     </div>
   );
 };
